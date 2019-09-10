@@ -1,0 +1,26 @@
+{% extends "header.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block content %}
+
+<div class ="row col-md-4 col-md-offset-2">
+<style>
+body{
+    background-image:url({{url_for('static', filename='img/login.jpg')}});
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.text{
+    color: white;
+}
+
+</style>
+    <h2 class="text" style="margin-top:100px">Login</h2>
+    <div class="text">
+        {{wtf.quick_form(form)}}
+        </div>
+    </div>
+    <br>
+{% endblock %}
+
